@@ -1,0 +1,29 @@
++ operator:
+	- arithmetic: +, -, *, /, // (floor), %, **
+	- comparisson: >, <, ==, !=, >=, <=, is, is not
+	- logical: and, or, not
+	- bitwise: &, |, ~ (NOT), ^ (XOR), >>, <<
+	- assignment: =, +=, -=, *=, /=, %=, //=, **=, &=, |=, ^=, >>=, <<=
+	- identify: is, is not
+	- membership: in, not in
+
++ ternary operator: [on_true] if [expression] else [on_false]
+	eg: min = a if a < b else b
+
++ operator overloading: trong class
+	__add__
+	__gt__, __lt__
+	__eq__
+	...
+
++ any, all
+	- any: true nếu ít nhất 1 cái true
+	- all: chỉ true khi tất cả đều true
+
++ '==' vs is
+	- '==':
+		+ là comparison operator
+		+ so sánh 2 giá trị bằng nhau hay không
+	- is:
+		+ identify operator
+		+ kiểm tra xem cả 2 có refer đến cùng 1 object hay không (cùng vị trí bộ nhớ)

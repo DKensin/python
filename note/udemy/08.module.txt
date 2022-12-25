@@ -1,0 +1,20 @@
+1. module
+    - 1 source file
+    - để include: import
+    - khi run main source sẽ biên dịch module được import thành __pycache__, .pyc extension
+
+2. package
+    - folder chứa các module
+    - rule: có __init__.py ở root của package: để Python hiểu được nó là package, cho dù đây là file rỗng
+
+*) có thể dùng alias cho namespace (module, package) nhưng không recommend
+
+pip3 install package_name
+pip list
+
+virtual environment: solve vấn đề project khác nhau chạy trên package version khác nhau
+install: py -m pip install virtualenv
+create a virtual environment:   py -m venv my_env -> tạo 1 folder my_env
+active venv:        my_env/bin/active
+check in venv:      which python
+deactive:           deactive 

@@ -1,0 +1,5 @@
++ generator: cho phép tạo ra sequence of values
+    - yield: cho phép pause and resume function
+    - tốn ít bộ nhớ hơn -> giảm khả năng overflow.
+    - iterable vs generator
+    

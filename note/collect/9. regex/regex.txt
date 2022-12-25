@@ -1,0 +1,84 @@
++ RegEx: regular expression
+	- chuỗi các ký tự đặc biệt, dùng để tìm kiếm chuỗi (pattern) trong 1 string/set-strings
+	- Python: cung cấp 're' module
+
++ re.search(r"pattern", str)
+	- r: đại diện cho raw-data, không phải regex
+	- khác biệt:
+		+ raw-data: không interpret '\' character là 1 escape character
+		+ regex: interpret '\' là escape character
+
++ metacharacters
+	\	dùng với ký tự đặc biệt
+		+ ví dụ search '.' trong string, thì '.' bị hiểu là match any characters
+	[]	set characters 0-9, a-z...
+	[^]	match any except set character
+		[0-3] match any number 0,1,2,3
+		[^0-3]: any number except 0,1,2,3
+	^	match begin
+		eg: ^geek: match với geek, geeks
+	$	match end
+	.	match any character, trừ newline
+	|	OR (match any character được seperated bởi |)
+	?	match zero/one occurrence
+		eg: ab?c match với ac, abc, nhưng không match với abbc
+	*	match any number of occurence (gồm cả 0 lần xảy ra - 0 occurence)
+	+	match one/more occurence
+	{}	number of occurences of a preceding regex to match
+		eg: a{2,4} match aaab, baaaac,gaad; không match abc, bc
+	() enclose a group of regex
+
++ special sequence: không dùng để match character mà để chỉ ra location
+	\A 		match begin
+	\b 		\b(str): begin, (str)\b: end
+	\B 		opposite \b: not start or end
+	\d 		match any decimal digit, tương đương với [0-9]
+	\D      match any non-digit, tương đương [^0-9]
+	\s  	match any whitespace character
+	\S  	match any non-whitespace character
+	\w 		match any alphanumeric character, tương đương [a-zA-Z0-9_]
+	\W 		match any non-alphanumeric
+	\Z  	match if end with given regex
+
++ re module
+	re.findall(): return list chứa tất cả match
+	re.compile()
+		- regex được compile thành pattern object
+		- patern object chứa method cho các operations như search pattern, string substitution
+	re.split()
+	re.sub(): thay thế
+	re.subn(): tương tự re.sub(), nhưng trả về tuple = (new_string, num_replace)
+	re.escape(): thêm \
+	re.search(): return None/re.MatchObject, stop khi có first match
+	Match Object: chứa tất cả information về search, result
+		re
+		string
+		start(), end(), span()
+		group(), group(0), group(1)...
+
++ search(), match(), findall()
+	- re.search:
+		+ stop ở first match
+		+ phù hợp với testing hơn là extract data
+	- re.match(pattern, string, flags=0):
+	 	+ match pattern cho toàn bộ string
+	 	+ return None / Match Object
+	- re.findall(): return toàn bộ match dưới dạng list
+
++ verbose
+	- re.VERBOSE: flag giúp cho regex dễ đọc hơn nhờ cho phép tách rời pattern và add comment
+	- whitespace được bỏ qua, trừ sử dụng \, hoặc token như là *?, (?:, (?P
+	- ví dụ:
+		+ không có VERBOSE
+			regex_email = re.compile(r'^([a-z0-9_\.-]+)@([0-9a-z\.-]+)\.([a-z\.]{2, 6})$',
+              re.IGNORECASE)
+        + dùng VERBOSE
+        	regex_email = re.compile(r"""
+            ^([a-z0-9_\.-]+)              # local Part
+            @                             # single @ sign
+            ([0-9a-z\.-]+)                # Domain name
+            \.                            # single Dot .
+            ([a-z]{2,6})$                 # Top level Domain  
+             """,re.VERBOSE | re.IGNORECASE)
+
+    - được pass như là 1 argument cho re.compile(regex, re.VERBOSE): trả về RegexObject

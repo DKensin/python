@@ -1,0 +1,14 @@
++ class variable:
+	- shared giữa các object, còn gọi là static variable
+	- chỉ có duy nhất 1 copy của class variable và shared nhau giữa tất cả objects
+	- convention: đặt class variable trước constructor và các method khác
+
++ access class variable:
+	- by class name: recommend
+	- by object reference
+	- by self trong constructor / instance method
+	- by cls trong class method
+
++ modify class variable:
+	- by class name
+	- không modify bởi object vì modify không ảnh hưởng đến object khác: chỉ là copy

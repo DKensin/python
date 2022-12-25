@@ -1,0 +1,4 @@
++ input: input()
++ multiple input:
+	- input().split()
+	- list comprehension

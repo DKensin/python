@@ -1,0 +1,10 @@
+1. use editor with syntax highlight
+2. read error log
+3. use pdb
+    pdb.set_trace()
+        - print value: num1
+        - find help: help
+        - step:
+        - continue
+        - a: list all argument
+        - w: show context

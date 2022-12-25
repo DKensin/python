@@ -1,0 +1,43 @@
++ constructor / destructor:
+	- constructor: 1 method đặc biệt dùng để khởi tạo 1 object
+		+ method này được defined bên trong class
+		+ được executed tự động mỗi khi object được tạo
+		+ Python cung cấp default constructor nếu không có constructor nào được defined
+	- destructor: sử dụng để destroy object
+	- các methods:
+		__new__: create object
+		__init__: init object
+		__del__: delete object
+
++ types of constructors:
+	- default constructor:
+		+ Python add default constructor nếu constructor không được defined
+		+ nếu implement constructor -> default constructor sẽ không được add
+	- non-parametrized constructor: không có bất kỳ arguments nào
+	- parameterized constructor
+
++ constructor with default value
+
++ self keyword:
+	- sử dụng self với instance method
+	- không nhất thiết phải là self, có thể sử dụng naming khác, miễn là first parameter
+
++ constructor overloading:
+	- có nhiều constructor với parameters khác nhau nên mỗi constructor có thể thực hiện các tasks khác nhau
+	- Python không support constructor overloading
+	- nếu có nhiều constructor:
+		+ chỉ lấy constructor cuối cùng
+		+ throw error nếu arguments không trùng với constructor cuối cùng
+
++ constructor chaining:
+	- là quá trình gọi 1 constructor từ constructor khác
+	- hữu ích khi muốn gọi nhiều constructor cho constructor hiện tại
+	- rất tiện lợi với tính "inheritance"
+
++ count number objects of a class:
+	- tạo 1 class variable: count
+	- trong __init__: count += 1
+
++ constructor return value:
+	- không cho phép
+	- __init__ require return None, không được return value khác: TypeError

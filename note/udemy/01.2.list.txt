@@ -1,0 +1,74 @@
++ List: []
+	- ordered: trật tự data được insert vào không thay đổi
+	- mutable: có thể modify các items
+	- heterogenious: data với different types: str, int, bool, list, ...
+	- duplicate: cho phép duplicate data
+
++ tại sao dùng list:
+	- flexible, nhiều build-in function duy nhất: pop(), append()...
+	- mutable -> cho những data thay đổi, không cố định
+
++ create list:
+	- sử dụng list() constructor
+	- []
+
++ lengh list: len()
+
++ access list:
+	- bằng index -> gọi là "indexing" technique
+		-> vì list: index là duy nhất cho mỗi item
+	- bằng list slicing: access 1 range elements
+	- note:
+		+ index > len của list -> 'Index Error'
+		+ index: type là int(). nếu khác type -> 'Type error'
+
++ add element:
+	append(object): accept chỉ 1 parameter: biến, list,...
+	insert(index, object): 2 parameters
+	extend()
+
++ modify item:
+	- từng item:		my_list[0] = 2
+	- range of items	my_list[1:4] = [1, 2, 3]
+	- all items:
+
++ remove item:
+	- remove(item)
+		+ first occurence
+		+ item không có -> 'keyerror'
+	- pop(index):
+		+ nếu không truyền index -> pop last
+	- clear()
+	- del
+
++ remove range item: del + list_slicing: del my_list[2:5]
+
++ find item:
+	- index(item)
+		+ return index của first occurrence
+		+ item không có trong list -> 'ValueError'
+		+ prevent: try/except
+	- check exist: keyword in
+	- loop, enumerate(), count()
+
++ concatenate 2 lists:
+	- bằng +
+	- append(), extend()
+	- *: unpack into position argument
+	- list comprehension
+
++ copy list:
+	- deep copy: sử dụng = -> thay đổi new_list cũng thay đổi original_list: tại vì refer cùng 1 vị trị ô nhớ
+	- shallow copy:
+		+ copy()
+		+ list slicing
+		+ list() method: list(this_list)
+
++ list operations:
+	sort()
+	reverse()
+	clear()...
+
++ id/memory symbol:
+	id()
+	hex(id())

@@ -1,0 +1,71 @@
++ set: {} collect unique data
+	- unordered: không maintain order of data insert
+	- unchangeable: immutable
+	- heterogeneous: data with any types
+	- unique: not allow duplicate items
+
++ create set:
+	- {}: -> khó phân biệt đâu là set, đâu là dict
+	- set(iterable) constructor: luôn dùng nếu muốn tạo empty set
+	- set from list: set(list_name)
+	- nếu elemenet là mutable như list/dict -> error
+
++ access item: for loop, không thể dùng index
++ check item exist: in keyword
++ length: len()
+
++ add items:
+	- add(): 1 item
+	- update(): nhiều items
+	- toán tử |= (concatenation operator)
+	- * unpacking
+
++ remove items:
+	- remove(item) -> keyerror
+	- discard(item) -> not throw error
+	- pop(): pop random item
+	- clear()
+	- del set
+
++ set operation:
+	- union() hoặc | operator: trả về all items của 2 sets
+	- intersection() hoặc &: return những items chung
+	- intersection_update(): lấy những items chung update vào set ban đầu
+	- difference() hoặc -: return những items trong set1 mà không có trong set2
+	- difference_update(): bỏ phần chung đi, update vào set ban đầu
+	- symmetric_difference() hoặc ^: cộng items 2 set - items chung
+	- symmetric_difference_update(): update vào set ban đầu
+
++ copy set:
+	- deep copy: =
+	- shallow coppy:
+		+ copy()
+		+ set()
+		+ NOT slicing vì unordered
+
++ method:
+	- issubset(): con của 1 set khác
+  	- issuperset(): chả của 1 set khác
+  	- isdisjoint(): true nếu không có items chung, false nếu có
+  	- sorted()
+
++ build-in function:
+	- any(): bất kỳ item nào là True -> return True, tất cả item False -> False
+	- all(): return True nếu tất cả item là True
+	- max(), min()
+
++ Frozen Set
+	- immutable, unordered
+	- tạo frozen set: frozenset() function
+	- đặc điểm:
+		+ không thể add/remove item
+		+ read-only set
+		+ có thể dùng những method của set mà không update vào frozen set ban đầu
+
++ nested set: not allow
+	- vì set là immutable -> không thể có set inside set: raise lỗi: unhashable
+	- hashable: object mà value của nó không thay đổi trong runtime
+	- để tạo nested set: frozenset()
+		nested_set = set((frozenset(set1), frozenset(set2)))
+
++ set comprehension

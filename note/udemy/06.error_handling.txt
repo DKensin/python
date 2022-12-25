@@ -1,0 +1,18 @@
++ error handling:
+	- mục đích:
+		+ tránh chương trình bị terminate
+		+ debug
+	- common error:
+		SyntaxError
+		NameError
+		IndexError
+		KeyError (dict)
+		ZeroDivisionError
+
++ các kiểu handle:
+	try
+	except ValueError as err
+	else
+	finally
+	raise ValueError("message")
+	raise Exception("message")

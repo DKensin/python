@@ -1,0 +1,80 @@
++ Dictionary: {}
+	- cặp key-value
+		+ key: immutable
+		+ value: any types
+	- unordered: không có index value
+	- unique: keys phải là unique
+	- mutable: có thể add/modify/remove key-value sau khi creation
+
++ creat dict:
+	- {} với :
+	- dict() constructor
+	- sequence có item như là 1 cặp key-value: sequence có thể là tuple
+
++ access element: thông qua key bằng 2 cách:
+	- [key_name]
+	- get(key_name): nếu key_name không có, return None
+	- các method:
+		+ keys(): return list of all keys
+		+ values(): return list of all values
+		+ items(): return all items: each tuple for each key-value
+
++ iterating: for-loop
++ length: len()
+
++ add items:
+	- key-value assignment: person["weight"] = 50
+	- update():
+		person.update({"height": 6})
+		có thể add 1/nhiều key-value với update()
+		person.update({"weight": 50, "height": 6})						# dict
+		person.update([("city", "Texas"), ("company", "Google",)])		# list of tuple
+	- setdefault():
+		+ key-value not exist -> insert
+		+ chỉ có key -> value = None
+		+ key đã exsit -> không thay đổi value đã có
+
++ modify values:
+	- sử dụng key name: []
+	- update()
+
++ modify key:
+	- add key mới, remove key cũ
+	- pop(): pop trả về value của key
+	- change all keys: zip(new_key, dict_name.values())
+
++ remove items:
+	- pop(key): return value of key / KeyError
+	- popitem(): pop and last item / KeyErr
+	- del key
+	- clear()
+	- del dict_name: delete all
+
++ check if key exist: keys() and in
+
++ join 2 dict:
+	- update()
+	- **: unpacking (kwargs)
+	- overide value nếu key trùng nhau
+
++ copy dict:
+	- deep copy: =
+	- shallow copy:
+		+ copy()
+		+ dict() constructor
+
++ nested dict: allow
+
++ sort dict: sorted()
+	- by keys: sorted(dict_name.items())
+	- simple: sorted(dict_name)
+	- by values: sorted(dict_name.values())
+
++ dict comprehension
+
++ build-in function
+	- max(), min()
+	- all(), any()
+	- fromkeys(): return dict with specified keys and values
+
++ == and != operators với dict: check liệu dict chứa same items

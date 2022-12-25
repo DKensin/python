@@ -1,0 +1,40 @@
+1. Pure function
+	+ thỏa mãn 2 điều kiện
+		- với same input, luôn luôn return same output
+		- không tạo ra bất kỳ side-effect
+	+ side-affect: là những thứ mà function ảnh hưởng đến ở bên ngoài function
+		- print: cũng là side-effect vì hiển thị trên màn hình
+	+ tại sao nên có pure-function:
+		- với những biến global, có thể 1 context/developer khác thay đổi giá trị của biến
+			+ nếu không sử dụng pure-function: variable và function có thể ảnh hưởng lẫn nhau, tạo ra kết quả
+			  khác với mong đợi
+			+ sử dụng pure-function: không cần quan tâm bên ngoài
+		- sử dụng pure-function: ít bug hơn, fix bug dễ hơn vì chỉ tập trung vào function hiện tại
+		
+2. map(), filter(), reduce(), zip(), lambda
+	+ map()
+		- execute 1 function cho mỗi item trong iterable
+		- item này được pass cho function như là parameter
+	+ filter()
+		- return 1 iterator mà item được filter bởi 1 function
+		- function này test item có được accept hay không
+	+ zip()
+		- return 1 zip object: 1 iterator của tuple: tuple of tupple
+		- first item của các iterator zip với nhau, second mỗi iterator zip với nhau...
+		- nếu iterator có độ dài khác nhau -> iterator length min
+	+ reduce()
+		- input: function, 1 sequence
+		- return: single value
+		- hoạt động:
+			+ step1: ban đầu, function tính toán item đầu tiên của sequence -> return 1 result
+			+ step2: function sử dụng result ở step1 và second item của sequence
+			+ lặp lại cho hết sequence	
+	+ Lambda expression
+		- small anonymous function, chỉ sử dụng 1 lần
+			=> khác với def: có thể sử dụng nhiều lần
+		- có thể có bao nhiêu argument cũng được, nhưng chỉ được có duy nhất 1 biểu thức
+
+3. Comprehension: syntax ngắn hơn để tạo list mới
+	+ newlist = [expression for item in iterable if condition == True]
+	+ list comprehension
+	+ set comprehensio: tương tự list

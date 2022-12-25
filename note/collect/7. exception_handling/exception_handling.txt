@@ -1,0 +1,33 @@
++ Error: 2 loại:
+	- syntax error: gây ra bởi wrong syntax
+	- exception: không stop execute của program, nhưng thay đổi flow của chương trình
+
+Exception: base class cho tất cả exception trong Python
+
++ try-except: catching exception
+	- try: statement có thể raise exception
+	- except: handle exception
+
++ catching specific exception:
+ 	- try có thể có nhiều exception xảy ra
+ 	- follow:
+ 		try:
+ 		except:
+ 		except:
+
++ try with else
+	try:
+	except:
+	except:
+	else:
+
++ finally: luôn được thực thi sau try-except block
+	try:
+	except:
+	except:
+	else:
+	finally
+
++ raise exception
+	- force xảy ra 1 exception cụ thể
+	- phải là exception instance hoặc exception class (class kế thừa từ Exception)

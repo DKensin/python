@@ -1,0 +1,22 @@
++ function: first class citizen
+	- có thể passed như là 1 variable
+	- có thể là argument của 1 function khác
+	- act như 1 variable thông thường
+
++ var_name = func_name
+	- var_name trỏ đến memory location của func_name
+	- del func_name:
+		+ func_name() không thể called
+		+ var_name() vẫn called được
+
++ higher order function (HOC): 2 things
+	- function mà parameter của nó là 1 function khác
+	- function return 1 function khác
+
++ decorator:
+	- wrap another function và change it / enhance it
+	- purpose: want this function to have some extra features
+	- concept: decorator pattern
+
++ practice:
+	- calculate time execute

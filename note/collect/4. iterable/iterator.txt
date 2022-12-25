@@ -1,0 +1,20 @@
+1. iteration:
+	- general term: taking each item of something
+	- example: loop to go over a group of items
+
+2. iterable:
+	- example: list, tuple, dict, set, string
+	- has __iter__ method return an iterator
+	- or __getitem__: can take sequential index start from 0
+
+3. iterator:
+	- implement __next__ method
+
+4. loop
+	- first: create iterator object
+	- second: execute next() method
+
+5. create an iterator
+	- to create an object/class as an iterator, must implement __iter__ and __next__ method
+	- __iter__: return iterator object
+	- __next__: return next item

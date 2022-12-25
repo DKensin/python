@@ -1,0 +1,223 @@
+=========================================================================
+Geeks / Collect
+=========================================================================
++ Class and Object
+	- class = blueprint
+	- object = 1 instance of class
+	- object chứa:
+		+ state: biểu diễn = attribute, đồng thời phản ánh property của object
+		+ behavior: biểu diễn = method, đồng thời phản ánh response của object
+		+ identify: unique name của object
+		+ ví dụ:
+			identify: name of dog
+			state/attribute: breed, age, color
+			behavior: bark, sleep, eat
+	- definition:
+		Class definition syntax:
+			class ClassName:
+				# statement
+		Object definition syntax:
+			obj = ClassName()
+			print(obj.attr)
+	- declare Object (còn được gọi là instantiating a class)
+	- self:
+		+ class method cần có first parameter trong method definition
+		+ không đưa value cho first parameter này, Python cung cấp nó
+		+ nếu method không có argument nào, bản chất nó vẫn có 1 argument
+		+ khi gọi: my_obj.method(arg1, arg2) => Python tự convert về: MyClass.method(my_obj, arg1, arg2) -> self
+	- __init__ method: còn được gọi là constructor trong Python
+		+ tương tự constructor trong C++, Java: được sử dụng để khởi tạo object's state
+		+ constructor: có thể chứa nhiều câu lệnh
+		+ được gọi ngay khi 1 object của 1 class được instantiated
+	- instance variable, class variable
+		+ instance variable:
+			- data của mỗi instance, unique
+			- là các variables mà value được assign bên trong constructor / method with self
+		+ class variable:
+			- attribute, method được shared giữa các instances của class
+			- là các variables mà value được assign trong class
+
++ Constructor:
+	- được sử dụng để instantiating 1 object: assign value cho data memter của class khi 1 object được tạo
+	- trong Python, __init__() method được gọi là constructor, luôn được gọi khi 1 object được tạo
+	- type of constructor:
+		+ default constructor: không có bất kỳ argument nào
+		+ parameterized constructor:
+			- có parameters
+			- first parameter: reference đến instance
+
++ Destructor: được gọi khi object bị phá hủy
+	- Python: có 1 garbage collector: tự động handle memory management
+	- __del__(): destructor trong Python: được gọi khi tất cả reference đến object đã bị xóa
+
++ Inheritance: tính kế thừa
+	- là khả năng mà của 1 class được dẫn xuất / thừa kế attribute/method của 1 class khác
+		derive / inherit
+	- lợi ích của inheritance:
+		+ biểu diễn mỗi quan hệ trong thế giới thực :D
+		+ tái sử dụng reusability code
+			- không viết cùng đoạn code nhiều lần
+			- thêm các feature cho class mà không modify nó
+			- có mối quan hệ bắc cầu tự nhiên: B inherit A, C inherit B -> C inherit A also
+	- syntax
+		Class BaseClass:
+			{Body}
+		Class DerivedClass(BaseClass):
+			{Body}
+	- object class:
+		+ Python: mọi class inherit từ build-in basic class được gọi là 'object'
+		+ object variable chính là instance của class
+		+ Python 3.x, object là root của tất cả classes
+		+ Python 3.x, class Test(object) và class Test là giống nhau
+		+ Python 2.x:
+			- class Test(object): new-style class: tạo 1 class với object như là parent
+			- class Test: tạo 1 old-style class: không có 1 object parent
+	- subclassing (constructor của parent class):
+		+ child class cần phải chỉ rõ class nào là parent class
+		+ được thực hiện bằng cách đưa parent class name trong definition của child class
+			class child_class_name(parent_class_name)
+	- cần phải gọi __init__ của class để khỏi tạo attribute của class con
+	- types of inheritance:
+		+ single inheritance: inherit từ chỉ 1 parent class
+		+ multiple inheritance: inherit từ nhiều parent classes
+	- multilevel inheritance: child (con) và grandchild(cháu)
+	- hierarchical inheritance: nhiều class inherit từ cùng 1 parent class
+	- hybrid inheritance: kết hợp nhiều inheritance type
+		ví dụ:	
+			class Base:
+			class Child1(Base):
+			class Child2(Base):
+			class Son(Child1, Child2):
+	- private members của parent class
+		+ mục đích: không muốn class con kế thừa instance variable của class cha -> làm cho nó private
+		+ để 1 instance variable là private: thêm __ phía trước tên
+
++ Type of inheritance Python
+	- single: 	1 child - 1 parent
+	- multiple:	1 child - nhiều parents
+	- multi-level: grandchild - child - parent
+	- hierarchical: nhiều childs - 1 parent
+	- hybrid: kết hợp
+
++ Encapsulation: tính đóng gói
+	- mục đích:
+		+ wrap data và method, giới hạn quyền truy cập trực tiếp vào attribute / method
+		+ ngăn chặn sửa đổi ngẫu nhiên của data: các biến của object chỉ được modify thông qua method
+		+ gọi là private variable
+		+ class là 1 ví dụ của encapsulation vì nó gói tất cả data và functions trong 1 đơn vị duy nhất
+		+ hiden data / information hiding
+	- protect member:
+		+ không thể được truy cập bên ngoài class
+		+ có thể được truy cập trong class / sub-class (child)
+		+ Python không có khái niệm private attribute: mọi attribute đều là public: truy cập được từ bên ngoài class
+		+ quy tắc (convention): thêm '_' trước attribute -> thực ra chỉ là quy tắc, còn nó vẫn work như bình thường
+		+ name mangling:
+			+ thêm '__' prefix: Python tự động convert __atr thành _class__atr
+			+ không thể truy cập __atr trực tiếp từ bên ngoài class, nhưng vẫn có thể access _className__atr
+	- private member:
+		+ prefix: '__' -> name mangling
+
++ Polymorphism: tính đa hình
+	- polymorphysm: bản thân từ mang nghĩa là có nhiều dạng (forms)
+	- trong lập trình, nó mang nghĩa: cùng têm hàm (nhưng signature khác nhau) được sử dụng cho nhiều type khác nhau
+		+ vd1: build-in functin
+			len("geeks") 	# string
+			len([10,20,30])	# list
+		+ vd2: user-defined function
+			add(x,y,z=0)	return x+y+z
+			add(2,3)	# 5
+			add(2,3,4)	# 9
+	- polyporphism cho class method: cách sử dụng nhiều class type khác nhau, theo cùng 1 cách
+	- polymorphism với inheritance:
+		+ Python, cho phép child method class cùng tên với parent method class
+		+ Inheritance: child inherit từ parent
+		+ cho phép modify 1 method của child class mà inherit từ parent class
+		+ những thường hợp cần re-implement method ở child class gọi là "method overriding"
+	- polymorphism với Function và Object: function mà argument là bất kỳ object nào
+		-> có những phần chung của các object mà function có thể tác động lên với obj truyền vào
+		-> obj có chung tên method
+
++ Class variable / Static variable:
+	- Python không có static keyword
+	- class variable và instance variable:
+		+ class variable: value được assign trong class declaration
+		+ instance variable: value được assign trong method
+
++ Class method vs Static method
+	- class method:
+		+ first parameter: cls (giống self trong method)
+		+ sử dụng @classmethod: 1 build-in function decorator
+		+ class method: ràng buộc với class, không ràng buộc với object của class
+		+ có thể access/modify state của class: vì tham số đầu tiên là cls, không phải là object instance(self)
+	- static method:
+		+ không có first argument ngầm định nào giống như cls/self
+		+ ràng buộc với class, không ràng buộc với object
+		+ không thể access/modify các class state
+		+ @staticmethod
+	- khi nào sử dụng:
+		+ class method: tạo factory methods: trả về class objects (tương tự constructor) cho các use cases khác nhau
+		+ static method: tạo utility functions
+
++ Property:
+	- 1 loại attribute đặc biệt, có getter/setter/deleter method giống như __get__, __set__, __deleter__
+	- cách tạo property:
+		+ sử dụng hàm property()
+		+ sử dụng decorator: @property
+
++ 1 vài concept:
+	class / object
+	state = attribute(property), behaviour = method, identify = unique name
+	declare object = instantiating a class
+	constructor = __init__ trong Python
+	destructor = __del__, được gọi khi gọi del obj
+	inheritance: private member: thêm '__'
+	name mangling: '__'
+	class variable / instance variable / static variable
+		+ class variable: value được gán trong declaration class -> shared giữa các instances của class
+		+ instance variable: value được gán trong method/constructor -> khác nhau giữa các object
+	class method / instance method / static method
+		+ instance method: (self): là 1 method thông thường, dùng instance để gọi
+		+ class method: (cls): thuộc về cả class, khi gọi nó không cần dùng bất cứ instance nào để gọi
+		+ static: không sử dụng cls/self
+
+
+=========================================================================
+Udemy
+=========================================================================
++ giới thiệu
+	- mọi thứ trong Python đều là object
+	- __init__: được gọi là dunder method / magic method
+	- help(obj/class)
++ class method / static method:
+	- class method
+		+ có thể gọi mà không cần instantiate
+		+ có thể sử dụng để instantiate object
+	- static method: như 1 function thông thường
+
++ test your assumption: kiểm tra giả thuyết của bản thân bằng code để làm rõ vấn đề
++ encapsulation: pack method + attribute trong class
++ abstraction
+	- hiding information / trừu tượng hóa thôn tin
+	- chỉ cho quyền truy cập với những data cần thiết
+	- ví dụ các hàm build-in như len(), count(): không biết implement thực sự của nó, chỉ sử dụng
+
++ inheritance:
+	- isinstance(instance, ClassName) -> True/False
+	- với 1 class instance -> có các dunder method -> nó đến từ đâu
+	- mọi thứ trong Python kế thừa từ base object class, được gọi là 'object'
+		+ isinstance(instance, object) -> True/False
+		+ giải thích cho: methods được tự động gán cho class instance
+		+ class User() và class User(object) là 1 vì kế thừa từ 'object'
+
++ object introspection: khả năng xác định type của object ở runtime
+
++ 4 khái niệm cơ bản của OOP:
+	- encapsulation: pack attribute/method
+	- abstraction: hiding information, give access (method get/set...)
+	- inheritance
+	- polymorphism: đa hình (many forms):
+		- can share the method name
+		- overwrite method name
+		- nếu class con vẫn dùng method của class cha: method của class con gọi đến method của class cha:
+			+ super()
+			+ ParentClass.method_name()

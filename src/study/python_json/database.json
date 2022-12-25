@@ -1,0 +1,28 @@
+{
+    "author": "No Name",
+    "title": "Wonderful Journey",
+    "publishedDate": "17-03-2019",
+    "country": "German",
+    "city": "Berlin",
+    "publisher": "Publisher Name",
+    "chapters": [
+        {
+            "id": 1,
+            "title": "Journey Begin",
+            "pages": [
+                {
+                    "id": 1,
+                    "picture": "City_Building.png",
+                    "content": "Something else...",
+                    "footnote": "Something important..."
+                },
+                {
+                    "id": 2,
+                    "picture": "City_Building.png",
+                    "content": "Something else...",
+                    "footnote": "Something important..."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+các kỹ thuật sử dụng để loop:
+	+ enumerate()
+	+ zip()
+	+ items() với dict
+	+ sorted()
+	+ reversed()

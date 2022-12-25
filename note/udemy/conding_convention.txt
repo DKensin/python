@@ -1,0 +1,54 @@
+1. Name Style
+
+Function:		function, my_function
+Variable:		var, my_variable
+Class:			Model, MyClass
+Method:			class_method, method
+Constant:		CONSTANT, MY_CONSTANT
+Module:			module.py, my_module.py
+Package:		package, mypackage: không dùng underscore
+
+2. Code Layout
+	+ blank lines:
+		- nhiều step -> mỗi step tách ra bởi blank line
+		- mỗi dòng chỉ nên có tối đa 79 ký tự
+		- break line: sử dụng \
+	+ indentation: 4 spaces thay cho tab
+	+ đóng ngoặc:
+		numbers = [
+		]
+	+ comment: câu hoàn chỉnh, bắt đầu bằng chữ cái in hoa
+	+ doc strings: ''' hoặc """
+		- 1 line: """Doc strings"""
+		- nhiều line:
+			"""
+			Doc strings with multiple line
+			"""
+	+ khoảng trắng (whitespace):
+		- sử dụng thích hợp: quá ít thì khó đọc, nhiều quá thì khó nhìn
+		- với parameters của function, không dùng whitespace
+		- if: không cần whitespace
+	+ tránh trailing whitespace ở cuối dòng
+	+ với function call: không dùng whilespace
+	+ recommend:
+		var1 = 5
+		var2 = 6
+		some_long_var = 7
+
+	not-recommend:
+		var1          = 5
+		var2          = 6
+		some_long_var = 7
+
+	+ không so sánh Boolean value với True/False:
+		if my_bool == True: -> không sử dụng như này
+		if my_bool: nên sử dụng
+	+ sử dụng truly/falsy
+	+ sử dụng is not thay vì not is
+		if x is not None:	# recommend
+		if not x is None:	# not-recommend
+	+ không sử dụng if x: với ý nghĩa x is not None
+		if x:				# not-recommend
+		if x is not None: 	# recommend
+	+ sử dụng .startwith() và .endwith() thay vì slicing
+	+ import từng module 1, không import 1 lúc nhiều module

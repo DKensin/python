@@ -1,0 +1,167 @@
+Học ngôn ngữ
+    + terms
+    + data types
+    + actions
+    + best practices
+
+Data type
+    + fundamental data types
+        - normal:
+            int     : number
+            float   : number    -> tốn bộ nhớ hơn so với int
+                **: mũ
+                //: chia lấy nguyên
+                %: chia lấy dư
+            comlex: number
+            bool
+            str
+        - data-structure
+            list
+            tuple
+            set
+            dict
+    + classes -> custom types
+    + specialized data types: modules (package, lib)
+    + None = NULL
+
+variable
+expression, statement
+immutability: cannot be changed: không thể thay đổi 1 phần của string
+boolean: True(1) / False (0)
+
+
+String ''/"":
+    + tính chất
+        - immutable
+        - slicing
+        - có thể truy cập bằng index
+    + string slicing
+    + method
+        - len()
+        - upper()
+        - find()
+        - replace()
+
+
+List: []
+    + tính chất
+        - ordered
+        - mutable 
+    + list slicing -> tạo ra list mới, không modify list gốc
+    + method
+        - len()
+        - add: append(), insert(), extend()
+        - remove: pop(), pop(index), remove(value), clear()
+        - index(value, start, stop)
+        - keyword "in" -> return True/False
+        - count(value)
+        - sort() method và sorted() build-in function
+            + sort(): modify chính object đấy, không return gì
+            + sorted(): tạo ra object copy, sort, không modify object gốc
+        - copy(), [:]
+        - reverse(), [::-1]
+        - range():
+            + list[range(1,10)] -> [1...9]
+            + range(10): 0 -> 9
+        - join()
+    + list unpacking
+        - "_": dummy variable
+
+
+Dictionary {} = object: key-value pair
+    + tính chất
+        - unorder key-value pair -> không thể truy cập bằng index
+            + không thể access bằng index
+            + mỗi cặp key-value đặt đâu đấy ở memory
+        - key:
+            + có thể là str, int, boolean
+            + key phải immutable (không thể reassign) -> list không thể là key
+            + tốt nhất nên là str và description
+            + unique, nếu nhiều key -> overwrite
+    + method
+        - get(): tránh error nếu key không exist
+        - in keyword
+        - keys(), values(), item()
+        - remove: pop(key), popitem() clear()
+        - update():
+            + key exist -> update value mới
+            + key not exist -> tạo key mới
+        - copy()
+
+
+Tuple ()
+    + like list, nhưng mà không giống như list, không thể modify tuple
+    + tính chất:
+        - immutable
+        - có thể truy cập bằng index
+        - nhanh hơn list
+    + dict.item() -> return tuple: vì keys của dict là immutable
+    + tuple slicing
+    + tuple unpacking: giống list
+    + method
+        - in keyword
+        - len()
+        - count
+        - index: first value tìm thấy
+
+
+Set {}: khác dict là nó không có key-value pair
+    + set = unordered collect of unique objects
+    + unique, not duplicate
+        - khi add(), nếu add những value đã có -> bị remove
+        - muốn remove duplicate array(list) -> cast sang set data-type
+    + tính chất
+        - unorder -> không thể truy cập bằng index
+    + method
+        - len()
+        - in keyword
+        - copy()
+        - difference()  -> return những element khác nhau
+            difference_update(): remove giống nhau, modify set ban đầu
+        - intersection(): return những element giống nhau
+            set1 & set2: 1 cách khác
+        - isdisjoint(): trùng -> False, không trùng -> True
+        - union(): gộp 2 set, remove duplicate (tính chất của set)
+            set1 | set2: 1 cách khác
+        - discard(): giống remove value
+        - issubset(): tập con -> True
+        - issupperset(): y hệt -> True
+
+
+
+
+===============================================================================================
+Summarize
+===============================================================================================
+1. Data-type
+2. Number
+    + math function
+    + ưu tiên toán tử
+    + bin(): convert binary
+    + complex (ít dùng)
+3. Expression, statement
+4. augmented assignment operator: +=, -=...
+5. String
+    + concatenation
+    + ép kiểu
+    + escape sequences: \', \" -> tránh python hiểu nhầm là kết thúc string
+    + formatted string: f''
+    + string index -> bao gốm string slicing
+    + tính immuatable
+    + build-in function + method
+6. Boolean
+7. None = NULL
+8. List
+    + list slicing
+    + matrix == mutidimension array
+    + method
+    + common list pattern
+        - reverse(), [::-1]
+        - range()
+        - join
+    + list unpacking
+9. Dict
+    + key
+    + method
+10. Tuple
+11. Set

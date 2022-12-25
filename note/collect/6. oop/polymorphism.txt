@@ -1,0 +1,48 @@
++ polymorphism:
+	- ability of an object to take many forms
+	- perform same action in many different ways
+
++ polymorphism with build-in function: ví dụ len(): for str, list, tuple...
+
++ override build-in function
+	- ví dụ override len(): def __len__
+
++ polymorphism with inheritance:
+	- polymorphism chủ yếu sử dụng với inheritance: method overriding (re-implementing)
+	- lợi thế của method overriding:
+		+ re-implement method trong lớp con theo nhiều cách khác nhau mà không ảnh hưởng đến lớp cha
+		+ method lớp cha không đủ cho lớp con implement -> cần re-implement
+	- trong polymorphism:
+		+ đầu tiên Python check class type
+		+ sau đó execute appropriate method
+
++ polymorphism in class method
+	- hữu ích khi cần group different object có cùng method
+		+ không cần check type trước khi gọi method
+		+ Python tự check lúc run-time và gọi method phù hợp
+		-> call method mà không cần quan tâm về type
+	- sử dụng với:
+		+ for loop:
+			for car in (ferrari, bmw):
+			    car.fuel_type()
+			    car.max_speed()
+		+ function:
+				my_func(object):
+					object.fuel_type()
+					object.max_speed()
+
++ polymorphism with build-in method
+
++ method overloading:
+	- quá trình gọi cùng 1 method với different parameters gọi là "method overloading"
+	- Python không support method overloading, thay vì đó chỉ lấy lastest defined method
+
++ operator overloading
+	- thay đổi default behavior của 1 operator
+	- ví dụ: '+' operator:
+		+ cộng 2 số
+		+ nối chuỗi / list /...
+	- '+' với object
+		- not work, vì không thể add 2 object
+		- overcome: __add__ method
+	- '*' overloading: __mul__

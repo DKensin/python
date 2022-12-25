@@ -1,0 +1,61 @@
++ OOP: (object oriented programming): dựa trên khái niệm "object"
+	- object chứa:
+		+ data: property (thường gọi là attribute)
+		+ code: method (action mà object có thể thực hiện)
+	- tính chất của object: (ví dụ Car)
+		+ attribute: name, price, color
+		+ behavior: break, speed up, speed down...
+	- 1 khía cạnh quan trọng của OOP: reusable code (inheritance), còn được biết đến là DRY (don't repeat yourself)
+
++ class attribute:
+	- instance variable: thuộc về object
+	- class variable: thuộc về class
+
++ class method:
+	- instance method
+	- class method
+	- static method
+
++ create class:
+	- docstring (nên có)
+	- class_suite: class attribute và class method
+
++ constructor / destructor:
+	- constructor:
+		+ được sử dụng để initialize object
+		+ mục đích để declare/initial instance variable
+	- destructor: delete object
+
++ concept:
+
+	- encapsulation:
+		+ wrap data và function thành single entity
+		+ internal representation được ẩn với bên ngoài của object
+		+ mục đích:
+			- như là 1 protect layer
+			- giới hạn truy cập method/variable từ bên ngoài
+			- ngăn chặn truy cập ngẫu nhiên từ bên ngoài
+			- cung cấp cơ chế bảo vệ bằng cách ẩn data
+
+	- polymorphism:
+		+ ability to take different forms
+		+ cho phép thực hiện 1 action theo nhiều cách khác nhau
+		+ ví dụ:
+			- student có thể là:
+				+ student ở trường học
+				+ player ở 1 trận đấu
+				+ anh/em khi ở nhà
+			- 1 ví dụ trong programming: dấu +
+				+ phép cộng 2 số
+				+ phép nối chuỗi / list / string...
+
+	- inheritance: mục đích lớn nhất là để tái sử dụng code (reusable code)
+
+	- abstraction: show những thông tin cần thiết, ẩn những thông tin không cần thiết đi
+		+ 2 types:
+			- data abstraction (attribute)
+			- process abstraction (method)
+		+ ví dụ:
+			- bàn phím: ấn nút j thì hiện chữ j
+			- không quan tâm implement cụ thể khi ấn nút j
+		+ bản chất: thêm 1 layer đơn giản hơn để sử dụng để ẩn những thứ phức tạp bên trong

@@ -1,0 +1,22 @@
++ inheritance:
+	- reusability of code
+	- lớp con kế thừa data member, property, function từ lớp cha
+
++ type of inheritance:
+	- single inheritance
+	- multiple inheritance: 1 con kế thừa từ nhiều cha
+	- multilevel inheritance: cha-con-cháu...
+	- hierarchical inheritance: nhiều con từ 1 cha
+	- hybrid inheritance: kết hợp
+
++ super()
+	- con refer đến cha bằng cách dùng super()
+	- issubclass()
+
++ method overriding:
+	- re-defined method ở lớp con
+	- khi method ở lớp con có cùng name, parameter, return type với method ở lớp cha -> override
+
++ method resolution order MRO cho multiple inheritance
+	1. tìm trong class hiện tại, nếu không có tìm trong class cha được chỉ ra khi inheriting (trái sang phải)
+	2. có thể lấy MRO của 1 class bằng mro attribute hoặc mro() method

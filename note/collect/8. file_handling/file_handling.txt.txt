@@ -1,0 +1,41 @@
++ file:
+	- Python xem file như là text/binary
+	- mỗi line: sequence of character và EOL (end of line - dùng để  terminated line)
+		+ EOL: '\n' default
+		+ in case CSV (comma separated file), ',': EOF default
+
++ open: file = open(file_name, mode): return file object
+	- mode:
+		+ text
+			r 		read
+			w		write, nếu có data -> overridden
+			a 		append, data không bị ghi đè
+			r+/w+	read/write data, data trước đó bị ghi đè
+			a+		append/read data, data trước đó không bị ghi đè
+		+ binary
+			rb: 	read only
+			rb+: 	read/write
+			wb: 	write only
+			wb+: 	read/write
+			ab: 	append
+			ab+: 	append/read
+
+	- file: file object
+	- read:
+		+ read(): trả về 1 string chứa số bytes đọc được
+		+ readline(): trả về 1 string chứa 1 line đọc được
+		+ readlines(): trả về 1 list, mỗi element của list là 1 line
+	- write:
+		+ file.write(): write 1 string trong single line
+		+ file.writelines(): write 1 list string (multiple lines)
+
+
++ close:
+	- close file
+	- free memory space
+
++ with statement:	with open(file_name) as file
+	- with được dùng trong exception handling, làm cho code cleaner và dễ đọc hơn
+	- đơn giản hóa việc quản lý resource như file streams
+	- không cần file.close() khi sử dụng with
+	- with tự nó release resource

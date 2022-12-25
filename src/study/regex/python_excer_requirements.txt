@@ -1,0 +1,20 @@
+REQUIREMENTS:
+- Split test case based on the descripttions (e.g. Lines contains "Testing the" substring are descripttions)
+- The "Testing the " phrase should be eliminated from test case description in output data structure
+- The output will be stored in a dictionary likes:
+   output = {
+       <test case 1 description>: {
+           "bandwidth" : {
+               "sender": [value1, value2], # Unit in Mbits/sec
+               "receiver": [value1, value2], # Unit in Mbits/sec
+           },
+           "cores_idle" : {
+               "all" : value # Unit in %,
+               "cores": [<core1>, <core2>, <core3>,.., <coreN>] # Unit in %,
+           }
+       }
+   }
+   
+- Use Python Regex as much as possible, shortest as possible to parse the raw log to desired data structure
+- Avoid using string built-in methods likes: .find(), .issubstring(), .replace(),....
+- Print out the output by using Pretty Printer library (with format) instead of normal print function.

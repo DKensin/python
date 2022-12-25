@@ -1,0 +1,80 @@
+0. String:
+	- ordered
+	- immutable
+1. String manipulation
+	+ operator:
+		- +
+		- * (multi-copy)
+		- in
+	+ build-in function
+		- chr(): convert int -> char (ASCII)
+		- ord(): char -> int
+		- len()
+		- str(): cast to string
+	+ indexing:
+		- từng items là 1 ordered set của data, có thể truy cập trực tiếp bởi index/key
+		- quá trình này được gọi là "indexing"
+		- python: string là ordered
+	+ slicing: lấy là substring từ 1 string, gọi là slicing
+		s[m:n:step]
+			- bỏ m: tính từ index 0
+			- bỏ n: tính đến hết
+			- s[:n] + s[n:] == s
+			- s[:] -> return string ban đầu, cùng id
+	+ interpolating variable into a string:
+		- formated string với f" (lowercase) hoặc F" (uppercase), đặt các biến trong {}: gọi là variable interpolated
+		- gọi là placeholder
+	+ modifying string
+		- immutabe: không thể modify trực tiếp bằng index: s[3] = 'a'
+		- làm thế nào để modify
+			+ slicing: s = s[:3] + 'a' + s[4:]
+			+ string method:
+				- string method operate on exist string, return new string, existing string not modified
+				- tìm kiếm: find(), index(), in, not in
+				- thay thế: replace()
+				- upper(), lower(), strip(), split()
+	+ build-in method
+		- caplitalize(): viết hoa chữ cái đầu
+		- lower(), upper()
+		- swapcase(): thường -> hoa, hoa -> thường
+		- count()
+		- endwith(), startwith()
+		- find(), index()
+		- rfind(): trả về last occurence / -1
+		- rindex(): trả về last occurence / ValueError
+		- phân loại:
+			+ isalnum(): chứa cả chữ hoặc số
+			+ isalpha(): chữ
+			+ isdigit(): số
+			+ isidentifier(): string có là identifier hợp lệ trong Python: không check được keyword
+			+ islower(), isupper()
+			+ isprintable()
+			+ isspace(): trả về True nếu không rỗng, tất cả ký tự là whitespace: ' ', \t, \n
+			+ lstrip(): removed any whitespace ở đầu / bên trái
+			  rstrip(): removed any whitespace ở cuối / bên phải
+			  strip(): removed space ở đầu / cuối
+
+		- convert string <-> list
+			+ join()
+			+ list(string)
+			+ partition(): first occurence
+			+ rpartition(): last occurence
+			+ rsplit(), split(), splitlines(): split line
+
+2. bytes Objects
+	+ build-in cho binary data
+	+ immutable, mỗi ký từ là 1 byte
+	+ cách define:
+		- thêm 'b' prefix
+		- bytes(string, encoding): ví dụ: utf8
+		- bytes(size): null obejct, size bytes
+		- bytes(interable): mỗi element từ 0 -> 255
+	+ operation: tương tự string
+		- in, not in, +, *
+		- indexing, slicing
+		- build-in: min(), max()
+	+ bytes -> list of integer: list()
+
+3. bytearray object:
+	+ define: bắt buộc dùng bytearray()
+	+ mutable: có thể modify trực tiếp bằng index/slicing

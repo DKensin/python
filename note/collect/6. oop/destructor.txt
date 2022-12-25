@@ -1,0 +1,24 @@
++ destructor:
+	- được gọi khi delete/destroy object
+	- dùng để: thực hiện clean-up activity trước khi destroy object:
+		+ closing database connection
+		+ close file
+		+ clean buffer/cache...
+	- Python có garbage collector:
+		+ handle memory management automatically
+		+ ví dụ: clean-up memory khi 1 object ra ngoài scope
+		+ không chỉ object bị destroyed, ngoài ra cũng phải close resources khác khi sử dụng object
+	- destructor được gọi khi:
+		+ object goes out of scope
+		+ reference counter của object = 0
+		+ del object_name
+	- khi destructor object -> object được thu gom trong garbage collect
+
++ note: nếu object có nhiều reference -> destructor chỉ được gọi khi reference counter = 0
+
++ cases destructor not work correctly
+	- circular referencing
+	- exception xảy ra trong __init__
+		+ nếu bất kỳ exception nào xảy ra trong quá trình init object, constructor sẽ destroy object
+		+ Python: nếu có exception trong init -> del sẽ được gọi
+		+ case: object không được tạo thành công -> resource không được allocate cho object, mặc dù vậy del vẫn cố empty all resources -> có thể gây ra exception khác

@@ -1,0 +1,39 @@
++ create object:
+	- khi object được tạo, gọi là: instantiation
+	- object còn được gọi là 1 instance của class
+	- constructor: 1 method đặc biệt, dùng để
+		+ create object: __new__
+		+ initialize object: __init__
+
++ class attribute:
+	- khi design class, sử dụng: instance variable và class variable
+	- instance variable:
+		+ attributes attached với 1 instance của class
+		+ define instance variable trong constructor
+		+ không shared nhau giữa các object
+	- class variable:
+		+ declared bên trong class, nhưng bên ngoài bất kỳ instance method hoặc __init__
+		+ shared nhau giữa các object
+		+ modify class variable ở object này không ảnh hưởng đến class và object khác
+
++ class method: 3 types
+	- instance method:
+		+ access/modify object state
+		+ 1 method được gọi là instance method nếu sử dụng instance variable
+		+ work on instance level: 2 object khác nhau về value của attribute nhưng cùng sử dụng instance method để access
+		+ self
+	- class method:
+		+ access/modify class state
+		+ 1 method được gọi là class method nếu "chỉ" sử dụng class variable
+		+ cls
+	- static method
+		+ mục đích: tạo utility/perform task in isolation
+		+ không sử dụng cả instance variable và class variable
+		+ không có self và cls
+
++ pass statement
+
++ object property:
+	- access/modify: sử dụng '.' operator
+	- delete: del object_name.property_name
+	- delete object: del object_name

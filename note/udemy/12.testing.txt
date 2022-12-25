@@ -1,0 +1,6 @@
+tool:
+    - pylint
+    - pyflakes
+    - follow: PEP 8
+
+py test_case.py -v

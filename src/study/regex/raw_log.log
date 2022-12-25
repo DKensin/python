@@ -1,0 +1,140 @@
+2022-08-14:06:01:28 INFO    /work/nxf65897/jenkins_workspace/workspace/nightly-test-ethernet/tests/eth-gw/pfe/../../common/common.sh:292  Testing the PFE fast path in L2 mode with a UDP stream of 4096 bytes... 
+Sun Aug 14 02:55:40 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.000 ms  0/876420 (0%)  sender
+Sun Aug 14 02:55:40 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.042 ms  0/876402 (0%)  receiver
+Sun Aug 14 02:55:40 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.000 ms  0/876400 (0%)  sender
+Sun Aug 14 02:55:40 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.070 ms  0/876383 (0%)  receiver
+Average:        all      0.86      0.00      0.47      0.02      0.04     98.62
+Average:          0      0.47      0.00      0.30      0.00      0.03     99.20
+Average:          1      0.73      0.00      0.40      0.00      0.03     98.83
+Average:          2      1.00      0.00      0.67      0.13      0.07     98.13
+Average:          3      1.27      0.00      0.33      0.00      0.03     98.37
+Average:          4      0.80      0.00      0.40      0.00      0.03     98.77
+Average:          5      0.73      0.00      0.47      0.00      0.03     98.76
+Average:          6      0.73      0.00      0.23      0.00      0.03     99.00
+Average:          7      1.17      0.00      0.93      0.00      0.03     97.87
+Testing the PFE fast path in L2 mode with a UDP stream of 1472 bytes... 
+Sun Aug 14 02:56:27 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.000 ms  0/2437920 (0%)  sender
+Sun Aug 14 02:56:27 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.021 ms  13/2437868 (0.00053%)  receiver
+Sun Aug 14 02:56:27 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.000 ms  0/2437870 (0%)  sender
+Sun Aug 14 02:56:27 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.020 ms  0/2437820 (0%)  receiver
+Average:        all      0.90      0.00      0.51      0.01      0.05     98.54
+Average:          0      0.87      0.00      0.47      0.00      0.07     98.60
+Average:          1      0.50      0.00      0.23      0.00      0.07     99.20
+Average:          2      1.00      0.00      0.60      0.00      0.07     98.33
+Average:          3      0.73      0.00      0.37      0.00      0.03     98.86
+Average:          4      1.20      0.00      0.57      0.00      0.03     98.20
+Average:          5      1.23      0.00      0.80      0.00      0.07     97.90
+Average:          6      0.87      0.00      0.27      0.07      0.03     98.76
+Average:          7      0.77      0.00      0.77      0.00      0.03     98.43
+Testing the PFE fast path in L2 mode with a UDP stream of 466 bytes... 
+Sun Aug 14 02:57:13 2022 [  5]   0.00-30.00  sec  3.06 GBytes   876 Mbits/sec  0.000 ms  0/7045460 (0%)  sender
+Sun Aug 14 02:57:13 2022 [  5]   0.00-30.00  sec  3.06 GBytes   875 Mbits/sec  0.011 ms  3/7045364 (4.3e-05%)  receiver
+Sun Aug 14 02:57:13 2022 [  5]   0.00-30.00  sec  3.06 GBytes   876 Mbits/sec  0.000 ms  0/7045480 (0%)  sender
+Sun Aug 14 02:57:13 2022 [  5]   0.00-30.00  sec  3.06 GBytes   875 Mbits/sec  0.010 ms  0/7045383 (0%)  receiver
+Average:        all      0.90      0.00      0.45      0.02      0.05     98.58
+Average:          0      1.40      0.00      0.60      0.17      0.07     97.76
+Average:          1      1.00      0.00      0.33      0.00      0.03     98.63
+Average:          2      0.90      0.00      0.33      0.00      0.03     98.73
+Average:          3      0.80      0.00      0.27      0.00      0.03     98.90
+Average:          4      0.73      0.00      0.20      0.00      0.03     99.03
+Average:          5      0.77      0.00      0.50      0.00      0.03     98.70
+Average:          6      0.70      0.00      0.73      0.00      0.07     98.50
+Average:          7      0.87      0.00      0.67      0.00      0.07     98.40
+Testing the PFE fast path in L2 mode with a UDP stream of 18 bytes... 
+Sun Aug 14 02:58:01 2022 [  5]   0.00-30.00  sec   469 MBytes   131 Mbits/sec  0.000 ms  0/27307490 (0%)  sender
+Sun Aug 14 02:58:01 2022 [  5]   0.00-30.00  sec   468 MBytes   131 Mbits/sec  0.001 ms  52737/27307347 (0.19%)  receiver
+Sun Aug 14 02:58:01 2022 [  5]   0.00-30.00  sec   450 MBytes   126 Mbits/sec  0.000 ms  0/26204930 (0%)  sender
+Sun Aug 14 02:58:01 2022 [  5]   0.00-30.00  sec   450 MBytes   126 Mbits/sec  0.001 ms  1778/26204830 (0.0068%)  receiver
+Average:        all      1.01      0.00      0.57      0.09      0.06     98.28
+Average:          0      0.94      0.00      0.84      0.13      0.07     98.03
+Average:          1      1.43      0.00      0.40      0.27      0.03     97.87
+Average:          2      1.00      0.00      0.67      0.13      0.03     98.16
+Average:          3      0.94      0.00      0.53      0.13      0.07     98.33
+Average:          4      1.37      0.00      0.83      0.07      0.07     97.67
+Average:          5      0.67      0.00      0.30      0.00      0.07     98.97
+Average:          6      0.80      0.00      0.43      0.00      0.07     98.70
+Average:          7      0.90      0.00      0.53      0.00      0.07     98.50
+Testing the PFE fast path in L3 mode with a UDP stream of 4096 bytes... 
+Sun Aug 14 02:58:51 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.000 ms  0/876310 (0%)  sender
+Sun Aug 14 02:58:51 2022 [  5]   0.00-30.00  sec  0.00 Bytes  0.00 bits/sec  0.000 ms  0/0 (0%)  receiver
+Sun Aug 14 02:58:51 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.000 ms  0/876300 (0%)  sender
+Sun Aug 14 02:58:51 2022 [  5]   0.00-30.00  sec  0.00 Bytes  0.00 bits/sec  0.000 ms  0/0 (0%)  receiver
+Average:        all      0.87      0.00      0.75      0.01      0.18     98.19
+Average:          0      0.42      0.00      3.44      0.00      1.75     94.39
+Average:          1      0.90      0.00      0.27      0.10      0.03     98.70
+Average:          2      1.00      0.00      0.57      0.00      0.03     98.40
+Average:          3      0.87      0.00      0.47      0.00      0.03     98.63
+Average:          4      0.70      0.00      0.50      0.00      0.03     98.76
+Average:          5      1.24      0.00      0.67      0.00      0.03     98.06
+Average:          6      0.77      0.00      0.47      0.00      0.03     98.73
+Average:          7      0.87      0.00      0.63      0.00      0.07     98.43
+Testing the PFE fast path in L3 mode with a UDP stream of 1472 bytes... 
+Sun Aug 14 02:59:41 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.000 ms  0/2437620 (0%)  sender
+Sun Aug 14 02:59:41 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.030 ms  0/2437604 (0%)  receiver
+Sun Aug 14 02:59:41 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.000 ms  0/2437630 (0%)  sender
+Sun Aug 14 02:59:41 2022 [  5]   0.00-30.00  sec  3.34 GBytes   957 Mbits/sec  0.018 ms  0/2437617 (0%)  receiver
+Average:        all      0.84      0.00      0.45      0.02      0.04     98.65
+Average:          0      0.64      0.00      0.57      0.00      0.03     98.76
+Average:          1      0.70      0.00      0.47      0.13      0.03     98.67
+Average:          2      1.07      0.00      0.80      0.00      0.03     98.10
+Average:          3      1.07      0.00      0.20      0.00      0.07     98.66
+Average:          4      1.20      0.00      0.50      0.00      0.07     98.23
+Average:          5      0.60      0.00      0.23      0.00      0.03     99.13
+Average:          6      0.63      0.00      0.23      0.00      0.03     99.10
+Average:          7      0.83      0.00      0.57      0.00      0.03     98.57
+Testing the PFE fast path in L3 mode with a UDP stream of 466 bytes... 
+Sun Aug 14 03:00:31 2022 [  5]   0.00-30.00  sec  3.06 GBytes   875 Mbits/sec  0.000 ms  0/7044310 (0%)  sender
+Sun Aug 14 03:00:31 2022 [  5]   0.00-30.00  sec  3.06 GBytes   875 Mbits/sec  0.007 ms  0/7044310 (0%)  receiver
+Sun Aug 14 03:00:31 2022 [  5]   0.00-30.00  sec  3.06 GBytes   875 Mbits/sec  0.000 ms  0/7044030 (0%)  sender
+Sun Aug 14 03:00:31 2022 [  5]   0.00-30.00  sec  3.06 GBytes   875 Mbits/sec  0.026 ms  0/7044025 (0%)  receiver
+Average:        all      0.93      0.00      0.49      0.02      0.04     98.52
+Average:          0      0.60      0.00      0.33      0.00      0.03     99.03
+Average:          1      0.70      0.00      0.50      0.00      0.07     98.73
+Average:          2      0.93      0.00      0.40      0.00      0.03     98.63
+Average:          3      0.90      0.00      0.84      0.13      0.03     98.09
+Average:          4      1.17      0.00      0.50      0.00      0.03     98.30
+Average:          5      1.00      0.00      0.63      0.00      0.07     98.30
+Average:          6      1.40      0.00      0.33      0.00      0.03     98.23
+Average:          7      0.77      0.00      0.40      0.00      0.03     98.80
+Testing the PFE fast path in L3 mode with a UDP stream of 18 bytes... 
+Sun Aug 14 03:01:20 2022 [  5]   0.00-30.00  sec   474 MBytes   133 Mbits/sec  0.000 ms  0/27610620 (0%)  sender
+Sun Aug 14 03:01:20 2022 [  5]   0.00-30.00  sec   473 MBytes   132 Mbits/sec  0.006 ms  53268/27610619 (0.19%)  receiver
+Sun Aug 14 03:01:20 2022 [  5]   0.00-30.00  sec   452 MBytes   126 Mbits/sec  0.000 ms  0/26304220 (0%)  sender
+Sun Aug 14 03:01:20 2022 [  5]   0.00-30.00  sec   452 MBytes   126 Mbits/sec  0.008 ms  652/26304220 (0.0025%)  receiver
+Average:        all      0.87      0.00      0.53      0.02      0.04     98.55
+Average:          0      0.67      0.00      0.30      0.07      0.03     98.93
+Average:          1      1.37      0.00      0.90      0.03      0.03     97.67
+Average:          2      0.80      0.00      0.37      0.00      0.03     98.80
+Average:          3      0.47      0.00      0.23      0.03      0.03     99.23
+Average:          4      0.90      0.00      0.47      0.00      0.03     98.60
+Average:          5      1.27      0.00      1.10      0.00      0.07     97.57
+Average:          6      0.73      0.00      0.20      0.00      0.03     99.03
+Average:          7      0.77      0.00      0.63      0.00      0.03     98.57
+2022-08-14:06:03:04 INFO    /work/nxf65897/jenkins_workspace/workspace/nightly-test-ethernet/tests/eth-gw/pfe/../../common/common.sh:292  Testing the PFE fast path in L2 mode with a TCP stream of 32k bytes... 
+Sun Aug 14 03:02:07 2022 [  5]   0.00-30.00  sec  3.26 GBytes   935 Mbits/sec    0             sender
+Sun Aug 14 03:02:07 2022 [  5]   0.00-30.00  sec  3.26 GBytes   934 Mbits/sec                  receiver
+Sun Aug 14 03:02:07 2022 [  5]   0.00-30.00  sec  3.26 GBytes   933 Mbits/sec    0             sender
+Sun Aug 14 03:02:07 2022 [  5]   0.00-30.00  sec  3.25 GBytes   932 Mbits/sec                  receiver
+Average:        all      0.81      0.00      0.48      0.02      0.05     98.65
+Average:          0      1.04      0.00      0.47      0.00      0.03     98.46
+Average:          1      0.70      0.00      0.40      0.00      0.07     98.83
+Average:          2      0.97      0.00      0.27      0.00      0.03     98.73
+Average:          3      0.63      0.00      0.63      0.00      0.07     98.66
+Average:          4      0.90      0.00      0.33      0.00      0.03     98.73
+Average:          5      1.10      0.00      0.77      0.13      0.07     97.93
+Average:          6      0.40      0.00      0.20      0.00      0.03     99.37
+Average:          7      0.73      0.00      0.73      0.00      0.03     98.50
+Testing the PFE fast path in L3 mode with a TCP stream of 32k bytes... 
+Sun Aug 14 03:02:57 2022 [  5]   0.00-30.00  sec  3.26 GBytes   934 Mbits/sec    0             sender
+Sun Aug 14 03:02:57 2022 [  5]   0.00-30.00  sec  3.26 GBytes   934 Mbits/sec                  receiver
+Sun Aug 14 03:02:57 2022 [  5]   0.00-30.00  sec  3.26 GBytes   933 Mbits/sec    0             sender
+Sun Aug 14 03:02:57 2022 [  5]   0.00-30.00  sec  3.26 GBytes   932 Mbits/sec                  receiver
+Average:        all      1.15      0.00      0.84      0.18      0.16     97.67
+Average:          0      0.88      0.00      2.80      0.08      0.96     95.29
+Average:          1      1.50      0.00      0.47      0.13      0.07     97.83
+Average:          2      1.07      0.00      0.50      0.00      0.07     98.37
+Average:          3      1.07      0.00      0.53      0.03      0.07     98.30
+Average:          4      0.87      0.00      0.47      0.00      0.07     98.60
+Average:          5      1.20      0.00      0.90      0.57      0.07     97.27
+Average:          6      1.21      0.00      0.54      0.47      0.03     97.76
+Average:          7      1.37      0.00      0.80      0.17      0.07     97.60

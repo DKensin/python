@@ -1,0 +1,28 @@
++ kinds of variable:
+	- instance variable: còn được gọi là field / attribute của 1 object
+	- local variable: trong method / block code
+	- parameter: trong method declaration
+	- class variable: shared giữa tất cả object
+
++ instance variable:
+	- khác nhau giữa các object
+	- 1 seperate copy của instance variable được tạo
+	- được sử dụng trong instance method
+
++ access/modify instance variable
+	- dot operator '.'
+	- self
+	- getattr() method
+
++ add attribute
+	- không thể add instance variable cho class từ bên ngoài class vì instance varaible thuộc về object
+	- add instance variable cho 1 object không ảnh hưởng đến object khác vì mỗi object là 1 seperate copy
+
++ delete
+	- del
+	- delattr()
+
+
++ list all instance variable của 1 object
+	- dir(object_name): list all instance variable của object
+	- object_name.__dict__: list instance variable mà object có

@@ -1,0 +1,11 @@
+Section 1. Intro
+
+1. intro
+compiler: biên dịch ra ngôn ngữ máy (0/1)
+interpreter: thực thi từng dòng code
+
+
+                    interpreter                 cpython virtual machine
+python source --------------------> bytecode ---------------------------> ngôn ngữ máy
+
+2. py2 với py3: src viết trên py2 có thể không chạy với py3

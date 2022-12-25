@@ -1,0 +1,9 @@
+(.*)(Testing the PFE.+bytes)
+
+(.+\s+(\d+)\s(\w)(bits/sec).+(sender|receiver))
+
+Average:\s+all(.+)\s+(\d+).(\d+)$
+
+Average:\s+all.+\s+(\d+.\d+)
+
+.+all.+\s+(\d+.\d+)

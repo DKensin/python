@@ -1,0 +1,51 @@
++ encapsulation:
+	- bundling data and method within a single unit
+	- class là 1 example cho encapsulation: ràng buộc data và method thành 1 unit (class)
+	- mục đích:
+		+ information hiding (ẩn object's internal representation)
+		+ giới hạn truy cập variable, ngăn ngừa access data một cách ngẫu nhiên
+		+ bảo vệ dữ liệu
+
++ access modifier:
+	- types:
+		+ public: accessible anywhere from outside class
+		+ private: accessible within class: là các attribute thông thường, kể cả có hay không có '_', '__'
+		+ protected: accessible within class and its sub-class
+	- Python không có modifier, thay vào đó sử dụng:
+		+ protected: underscore: _ (chỉ là convention): hiểu là private member nhưng thêm restrict access
+		+ private: double underscore: __
+
++ private member:
+	- không thể access trực tiếp từ bên ngoài class
+	- 2 cách để access private member:
+		+ tạo 1 public method để access private member
+		+ sử dụng "name mangling"
+
++ name mangling:
+	- có thể truy cập trực tiếp private và protect variable từ bên ngoài class thông qua name mangling
+	- name mangling: _classname__datamember
+		+ classname: name of current class
+		+ datamember: private member
+
++ protected
+	- prefix '_'
+	- sử dụng khi implement inheritance, muốn chỉ lớp con truy cập vào protected member
+
++ getter / setter
+	- để implement encapsulation, cần setter/getter
+	- mục đích ban đầu của setter/getter để đảm bảo data encapsulation
+	- getter/setter thường sử dụng để:
+		+ tránh truy cập trực tiếp các private variable
+		+ add validation logic for setting a value (if-else...)
+
++ advantages of encapsulation
+	- security:
+		+ protects an object from unauthorized access
+		+ allows private and protected access levels to prevent accidental data modification.
+	- data Hiding
+		+ user would not be knowing what is going on behind the scene
+		+ they would only be knowing that to modify a data member, call the setter method
+		+ to read a data member, call the getter method
+		+ what these setter and getter methods are doing is hidden from them.
+	- simplicity: simplify maintenance of the application by keeping classes separated and preventing them from tightly coupling with each other.
+	- aesthetics: bundling data and methods within a class makes code more readable and maintainable

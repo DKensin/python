@@ -1,0 +1,97 @@
++ type of argument:
+	- default argument: argument bên phải default argument cũng phải là default argument
+	- keyword arguments: không cần phải nhớ order of arguments
+	- variable length-arguments: là những special symbols:
+		*args: 		tuple:	non-keyword arguments
+		**kwargs:	dict:	keyword arguments
+
++ pass by reference / pass by value
+	- trong Python, mọi tên biến là 1 reference
+	- khi pass variable cho function, a new reference sẽ được tạo
+	- khi pass reference, assign new value cho reference, connect giữa passed và received parameters sẽ bị phá vỡ
+
++ anonymous function (lambda function): function không có tên
+
++ function within another function:
+	- còn được gọi là inner function / nested function
+
++ yield:
+	- suspend function's execute, send a value back to caller
+	- khi resume thì execute ở điểm lần trước suspend
+	- cho phép tạo ra 1 series of values, hơn là tạo ra duy nhất 1 giá trị (return)
+	- được sử dụng trong Python generator
+		+ khi muốn iterate 1 sequence
+		+ không muốn lưu toàn bộ sequence trong memory
+
++ Python generator: 2 types:
+	- generator-function:
+		+ như 1 function bình thường
+		+ sử dụng yield thay vì return
+	- generator-object:
+		+ generator function: return generator object là iterable
+		+ generator object được sử dụng với:
+			- next() method
+			- loop
+	- ứng dụng:
+		+ stream processing: ví dụ large file data
+		+ tốn ít bộ nhớ hơn
+
++ lambda function
+	- any number of parameters but only once expression
+
++ global and local variables
+	- global keyword: sử dụng để modify global variable:
+		+ assignment
+		+ change
+	- share global variable giữa các module:
+		+ tạo 1 file chứa các global variable được shared giữa các module: config.py
+		+ import config
+
++ first class function:
+	- 1 ngôn ngữ được gọi là support first class function nếu nó xem first class function như là first class object
+	- tính chất của first class function:
+		+ function là 1 instance của Object type
+		+ function có thể:
+			- store trong 1 biến
+			- là parameter cho function khác
+			- được return từ 1 function
+			- có thể store trong data-structure như: hash table, list...
+
++ function closure:
+	- nested function
+	- non-local variable:
+		+ những biến được defined trong nested function, nơi mà biến không thuộc về inner function
+		+ là những biến không phải là global, cũng không phải là local
+	- closure:
+		+ a function + extended scope (contain free variables)
+		+ qua nhiều lần execute closure thì free variables vẫn tồn tại, không bị free đi
+		+ có nhiều closure instance khác nhau (mỗi lần gọi outer function)
+			- điều này có thể đạt được với class (mỗi object là 1 class instance)
+		+ nhiều closure instance có thể cùng reference đến free variable
+			- extended scope: shared nhau giữa các closure
+			- câu hỏi: shared variable bên trong inner function và non-local có trỏ đến cùng 1 object hay không
+			- Python support cell object:
+				+ thay vì trỏ đến shared-variable trực tiếp, nó sẽ trỏ đến cell object
+				+ cell object trỏ đến shared-variable: actual free object
+				+ khi modify free variable:
+					- 1 object mới (new value) được tạo ở đâu đấy trong memory
+					- memory address mới này được update trong cell object
+					- variable từ các scope đều thấy được sự thay đổi
+				+ how to inspect:
+					__code__.co_freevars: return free variable mà function reference
+					__closure__: return cell object
+					mỗi lần modify:
+						- cell object: không thay đổi
+						- update free variable address
+		+ why used?
+			- vì closure được sử dụng như callback function, nó cung cấp data hiding
+			- giúp giảm số lượng global variable
+
++ walrus operator: :=
+	- mục đích: tránh sử dụng nhiều lần, optimize code
+	- when used:
+	 	+ repeated function call
+	 	+ repeated statements
+	 	+ repeated call ảnh hưởng đến iterators
+
++ decorator

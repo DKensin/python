@@ -1,0 +1,90 @@
+conditional logic: True/False
+
+Truthy and Falsy:
+    + Truthy: boolean type conversion on value/expression -> True
+    + Falsy: ngược lại: None, False, 0, 0.0, empty: list,dict,tuple, str, byte(b''), set, range(0)
+
+Ternary operation:
+    [on_true] if [expression] else [on_false]
+    min = a if (a < b) else b
+
+Short circuiting: and, or, not
+
+Logical operator: <, <=, >, >=, == (equal), != (not equal)
+    = -> sử dụng để gán cho biến => 4 = 5 là invalid syntax
+
+is vs ==
+    ==: cast and compare: check equality in value
+    is: check if the location in meory where this value is stored is the same
+        cùng memory location, cùng giá trị => True
+        [] is [] -> false vì khi tạo 1 list mới, nó đặt ở đâu đó trong memory
+            [] bên trái: đặt đâu đó trong memory
+            [] bên phải: 1 list mới khác, place in another memory
+        a = [1,2,3]
+        b = [1,2,3]
+            a is b: False
+            a == b: True
+        '1' is '1': True: vì '1' bên trái và bên phải cùng là 1 vị trí trong memory
+
+Loop
+    + iterable = is something mà có thể bị lặp lại
+        - string, list [],  dict {} set {}, tuple ()
+        - iterated -> one by one check each item in the collection.
+        - iterate dict.items() -> return tuple -> sử dụng được tuple unpacking
+    + range()
+        - tạo ra 1 object mà có thể loop
+        - hữu ích khi mà muốn lặp bao nhiêu lần
+        - tip: không care đến biến:
+            for _ in range(0, 10, 2):
+                print(_)
+
+enumerate:
+    + khi deal with iterator, vẫn cần count cho iteration -> enumerate
+    + add a counter cho iterable -> return dưới dạng enumerate object
+
+While
+    + 1 case có thể sử dụng
+        while condition:
+            break   -> else not execute
+        else:
+
+Compare:
+    + while
+        - flexible hơn, làm được nhiều task hơn
+        - không biết trước dược lặp bao nhiều lần
+    + for
+        - đơn giản hơn
+        - lặp với số lần biết trước (không tính infinite)
+
+break, continue, pass
+    + pass
+        - khi pass được execute, không có gì xảy ra
+        - mục đích là tránh error vì không cho phép empty code
+
+Function
+    + DRY: donot repeat yourself -> function
+    + parameter vs argument
+        - sự khác nhau:
+            + parameter: define function
+            + argument: giá trị truyền vào
+        - position parameter/argument: truyền sai -> hàm hoạt động sai
+        - keyword argument: không quan tâm đến position nữa -> làm cho rối hơn
+        - default parameter: nếu không truyền đủ argument -> function dùng default paramter
+    + function vs method
+    + docstring
+        + sử dụng: ''''''
+        + help(func_name)
+    + *args, **kwargs
+        - rule: params, *args, default params, **kwargs
+        - args: tuple of parameter
+        - kwargs: dict of keyword parameter
+    + walrus operator: trong biểu thức trả về true/false, sử dụng walrus operator để gán cho 1 biến -> tránh lặp lại. Gán '=' sẽ gây error
+    + scope:
+        1 - start with local
+        2 - parent local
+        3 - global
+        4 - built in python functions
+    + dependency injection
+    + tại sao cần scope
+        - xuất phát từ hạn chế về memory
+        - mỗi khi 1 function done -> giải phóng bộ nhớ -> source code chiếm ít bộ nhớ nhất có thể

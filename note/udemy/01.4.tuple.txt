@@ -1,0 +1,57 @@
++ Tuple ()
+	- ordered: maintain order of data insertion
+	- unchangeable: immutable
+	- heterogeneous: element can be any type
+	- duplicate: allow
+
++ create tuple:
+	- use ()
+	- tuple() constructor
+	- single value:
+		+ phải thêm dấu ','
+		+ nếu không có -> có thể hiểu là str, int,...
+
++ packing, unpacking
+	- tạo tuple mà không cần ',' hoặc tuple() -> gọi là tuple packing
+	- tạo 1 tuple bằng cách pack 1 group và gán cho 1 biến (single variable): tuple1 = 1,2,"hello"
+	- unpacking: gán tuple items cho số lượng biến tương ứng: a,b,c = tuple1
+
++ length: len()
++ iterating: sử dụng loop
+
++ access tuple:
+	- indexing
+		+ index out of range: Index Error
+		+ index not int: Type Error
+	- slicing
+
++ find item:
+	- index()
+	- in, not in
+	- count()
+
++ add/change item:
+	- vì immutable: không thể add/modify/delete
+	- work-around: convert list -> change -> convert về tuple
+
++ remove item:
+	- del
+	- convert to list
+
++ copy tuple:
+	- có thể sử dụng '=' vì tuple là immuatable
+
++ concatenation tuple:
+	- +
+	- * (unpack)
+
++ nested tuple: allow
+	- element là mutable: list -> có thể change item
+
++ build-in function:
+	- min(), max()
+	- all(), any()
+
++ khi nào sử dụng:
+	- fixed data read-only (write-protected)
+	- sử dụng như là key cho dict vì immutable

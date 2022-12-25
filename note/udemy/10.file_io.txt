@@ -1,0 +1,6 @@
+1. with keyword
+2. cursor: seek()
+3. file path
+    - absolutely path
+    - relative path
+    - pathlib: filesystems path
