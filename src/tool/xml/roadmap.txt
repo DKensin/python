@@ -1,0 +1,27 @@
+1. Choose XML parsing model
+    - DOM (Data Object Model)
+        + parsed at once, store in memory
+        + suitable in case:
+            - convenience is important than processing time
+            - memory is not an issue
+
+    - SAX (Simple API for XML)
+        + event-based streaming API: individual elements rather than whole tree
+        + parser will trigger user-defined callbacks: handle specific XML nodes
+            - also known as "push" parsing
+            - elements are pushed to your functions by the parser
+        + suitable with:
+            - single-pass processing: indexing, conversion,...
+            - read-only parsing
+            - less memory space
+            - very large documents / incoming XML data in real-time
+        
+    - StAX (streaming API for XML)
+        - based on top of SAX
+        - use:
+            + idea of streaming
+            + a "pull" parsing model instead
+    
+    - can combine more than one XML parsing model
+
+2. XML Parsers in Python's Standard Library
