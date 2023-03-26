@@ -8,5 +8,4 @@ filtered_img.save("blur.png", "png")
 filtered_img = img.convert('L')
 filtered_img.save("grey.png", "png")
 
-
 print(img.format, img.size, img.mode)
